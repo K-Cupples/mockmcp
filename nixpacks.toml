@@ -1,0 +1,15 @@
+# Explicit Nixpacks build so Railway builds from lockfile and copies the
+# `landing/` directory into the final image. Without this, Nixpacks will
+# default to a similar plan, but pinning it avoids surprises on upgrade.
+
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "node dist/index.js"
