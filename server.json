@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.K-Cupples/mockmcp",
+  "description": "Hosted MCP endpoint with realistic fake data for prototyping agents. 12 tools, no setup.",
+  "repository": {
+    "url": "https://github.com/K-Cupples/mockmcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mockmcp.io/mcp"
+    }
+  ]
+}
